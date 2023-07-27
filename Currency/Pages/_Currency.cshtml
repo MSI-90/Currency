@@ -1,0 +1,7 @@
+﻿@model Currency.Pages.SuccessModel.InputModel
+
+<h5>Операция конвертации @Model.From в @Model.To в размере @Model.Amount @Model.From выполнена</h5>
+<h5>
+    Результат: @Math.Round(Convert.ToDecimal(Model.Quantity), 2, MidpointRounding.ToPositiveInfinity).ToString(/*$"{0,00:C}"*/)
+    @Model.To
+</h5>

@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Currency</title>
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />*@
+    <link rel="stylesheet" href="~/css/main.css" />
+	<link rel="icon" type="image/x-icon" href="~/favicon.ico" asp-append-version="true"/>
+</head>
+<body>
+    <container class="head">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-5">
+					<a href="/" class="head__logo">
+						<img src="~/images/Logo.png" alt="CurrencyConverter">
+					</a>
+				</div>
+				<div class="d-none d-lg-flex col-xl-7 col-lg-6">
+					<nav class="head__menu">
+						<a asp-page="/HeaderMenu/rules" class="head__menu-item">Правила обмена</a>
+						<a asp-page="/HeaderMenu/partners" class="head__menu-item">Партнерам</a>
+						<a asp-page="/HeaderMenu/amlkyc" class="head__menu-item">AML/KYC</a>
+						<a asp-page="/HeaderMenu/ns" class="head__menu-item">Новости</a>
+						<a asp-page="/HeaderMenu/fq" class="head__menu-item">FAQ</a>
+						<a asp-page="/HeaderMenu/cts" class="head__menu-item">Контакты</a>
+					</nav>
+				</div>
+				<div class="d-none d-sm-flex col-xl-3 col-lg-4 col-md-7 col-sm-6">
+					<div class="head__login">
+						<a href="#login" data-popup="login" class="head__login-item head__login-signin j-popup-open">
+								Войти
+						</a>
+						<a href="/account/reg" class="head__login-item head__login-signup button">
+								Зарегистрироваться
+						</a>
+					</div>
+				</div>
+            </div>
+        </div>
+    </container>
+
+     @RenderBody()
+
+    <footer class="foot">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-xl-5">
+					<div class="foot__partners">
+						<p>Партнеры сервиса:</p>
+						<div class="foot__partners-item">
+							<a href="https://www.bestchange.ru/"><img src="~/images/footer/bestchange-1.svg" alt="BestChange"></a>
+						</div>
+						<div class="foot__partners-item">
+							<a href="https://exchangesumo.com/"><img src="~/images/footer/exchangesumo.svg" alt="Exchange Sumo"></a>
+						</div>
+						<div class="foot__partners-item">
+							<a href="https://forum.bits.media/"><img src="~/images/footer/bits.png" style="width:130px" alt="Exchange Sumo"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-xl-7 d-flex flex-column flex-sm-row align-items-center justify-content-between justify-content-lg-end">
+					<a href="" class="foot__email"><span class="__cf_email__" data-cfemail="">[s.miller@List.ru]</span></a>
+					<div class="foot__social">
+						<a target="_blank" href="" rel="nofollow" class="foot__social-item">
+							<svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								
+							</svg>
+						</a>
+						<a target="_blank" href="https://vk.com/" rel="nofollow" class="foot__social-item">
+							<svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g>
+									<path d="" fill="#FAC02E"/>
+								</g>
+							</svg>	
+						</a>
+						<a target="_blank" href="https://twitter.com/" rel="nofollow" class="foot__social-item">
+							<svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_1824_4763)">
+									<path d="" fill="#FAC02E"/>
+								</g>
+							</svg>								
+						</a>
+						<a target="_blank" href="https://www.facebook.com/" rel="nofollow" class="foot__social-item">
+							<svg width="12" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.714 3.652h2.007V.155C11.377.107 10.183 0 8.795 0 5.899 0 3.918 1.822 3.918 5.17v3.08H.721v3.91h3.197V22h3.919v-9.84h3.068l.485-3.91H7.837V5.556c-.005-1.13.3-1.904 1.877-1.904Z" fill="#FAC02E"/></svg>
+						</a>
+						<a target="_blank" href="https://ok.ru/" rel="nofollow" class="foot__social-item">
+							<svg width="15" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#FAC02E"><path d="M8.386 0c.37.072.749.115 1.107.223 2.313.711 3.824 2.19 4.184 4.579.35 2.316-.608 4.143-2.584 5.402-3.02 1.924-7.133.76-8.626-2.393-1.169-2.463-.245-5.415 2.15-6.888A6.052 6.052 0 0 1 7.192.04a.921.921 0 0 0 .145-.038L8.386 0ZM7.85 8.318c.202-.023.406-.034.606-.071 1.61-.298 2.629-1.882 2.196-3.403-.409-1.435-1.986-2.306-3.497-1.938-1.218.295-2.128 1.324-2.18 2.467-.08 1.624 1.196 2.926 2.875 2.945Z"/><path d="m6.596 15.487-.734-.102c-1.563-.219-3.003-.737-4.248-1.716a5 5 0 0 1-.234-.194c-.584-.527-.67-1.046-.288-1.707.332-.574.994-.828 1.656-.615.235.075.458.183.662.32 1.547 1.044 3.264 1.438 5.117 1.3 1.403-.105 2.688-.529 3.84-1.337.3-.222.663-.346 1.037-.357.597-.008 1.08.313 1.322.881.242.569.168 1.003-.316 1.436a7.367 7.367 0 0 1-3.255 1.718c-.635.15-1.285.24-1.928.356-.058.01-.112.022-.168.033l-.066.075c.074.03.143.068.207.115 1.37 1.286 2.726 2.583 4.109 3.858.76.7.544 1.472.078 1.946-.624.637-1.47.671-2.096.08a1660.833 1660.833 0 0 1-3.366-3.19.658.658 0 0 0-.055-.04c-.058.053-.122.107-.182.165l-3.242 3.072c-.43.406-.932.527-1.487.297-.568-.235-.945-.639-1.012-1.263-.045-.411.152-.728.444-1.004 1.069-1.005 2.14-2.009 3.196-3.024.368-.357.692-.755 1.01-1.103Z"/></g><defs><clipPath id="a3"><path fill="#fff" transform="translate(.86)" d="M0 0h14v22H0z"/></clipPath></defs></svg>
+						</a>
+						<a target="_blank" href="https://www.instagram.com/" rel="nofollow" class="foot__social-item">
+							<svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.95 5.88c-.048-1.062-.22-1.793-.466-2.426a4.88 4.88 0 0 0-1.157-1.774 4.924 4.924 0 0 0-1.77-1.152C15.921.28 15.194.11 14.131.063 13.06.012 12.72 0 10.004 0 7.288 0 6.948.012 5.88.059 4.82.106 4.088.277 3.455.524A4.88 4.88 0 0 0 1.68 1.68 4.928 4.928 0 0 0 .528 3.45C.28 4.087.11 4.813.063 5.876.012 6.946 0 7.286 0 10.002c0 2.715.012 3.055.059 4.122.047 1.062.219 1.793.465 2.426a4.932 4.932 0 0 0 1.157 1.774c.5.508 1.105.902 1.77 1.152.637.247 1.364.418 2.426.465C6.944 19.988 7.284 20 10 20s3.056-.012 4.123-.059c1.062-.047 1.793-.218 2.426-.465a5.117 5.117 0 0 0 2.927-2.926c.247-.637.418-1.364.465-2.426.047-1.067.059-1.407.059-4.122s-.004-3.055-.05-4.122Zm-1.802 8.166c-.043.977-.207 1.504-.344 1.856a3.319 3.319 0 0 1-1.9 1.899c-.351.136-.883.3-1.856.343-1.055.047-1.371.06-4.04.06-2.67 0-2.99-.013-4.041-.06-.977-.043-1.505-.207-1.857-.343a3.076 3.076 0 0 1-1.149-.747 3.112 3.112 0 0 1-.746-1.148c-.137-.352-.301-.883-.344-1.856-.047-1.055-.059-1.372-.059-4.04 0-2.669.012-2.99.06-4.04.042-.977.206-1.504.343-1.856.16-.434.414-.828.75-1.149a3.1 3.1 0 0 1 1.15-.746c.35-.136.882-.3 1.856-.344 1.055-.047 1.371-.059 4.04-.059 2.673 0 2.99.012 4.041.06.977.042 1.505.206 1.856.343.434.16.829.414 1.15.746.332.325.585.715.746 1.149.137.351.3.883.344 1.856.047 1.055.059 1.371.059 4.04 0 2.668-.012 2.981-.059 4.036Z" fill="#FAC02E"/><path d="M10.004 4.864a5.14 5.14 0 0 0-5.139 5.138 5.14 5.14 0 0 0 10.278 0 5.14 5.14 0 0 0-5.14-5.138Zm0 8.47a3.334 3.334 0 1 1 0-6.667 3.334 3.334 0 0 1 0 6.668ZM16.546 4.661a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0Z" fill="#FAC02E"/></svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="foot__copy">
+			© Сервис электронного обмена валюты CurrencyConverter
+		</div>
+	</footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

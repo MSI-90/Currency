@@ -1,0 +1,70 @@
+﻿@page
+@model IndexModel
+@{
+    Layout = "_Exchange";
+    ViewData["Title"] = "Home page";
+}
+
+@section Exchange{
+    <section class="exchange">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="exchange__wrap">
+                        <div class="exchange__hours">
+                            <img src="/images/exchange/clock.svg" alt="Работаем круглосуточно">
+                            <p>Работаем круглосуточно</p>
+                        </div>
+                        <div class="exchange__body">
+                            <form method="post" style="width:100%;">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label asp-for="Input.CurrencyOut" class="out_class"></label>
+                                        <select asp-for="Input.CurrencyOut" asp-items="Model.CurrencyCodes" class="form-control money_input">
+                                            <option value="">***не выбрано***</option>
+                                        </select>
+                                        <span asp-validation-for="Input.CurrencyOut"></span>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label asp-for="Input.Quantity" class="out_class"></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <input asp-for="Input.Quantity" style="height:45px; text-align:center;color:maroon;"/>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <span asp-validation-for="Input.Quantity"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label asp-for="Input.CurrencyIn" class="out_class"></label>
+                                        <select asp-for="Input.CurrencyIn" asp-items="Model.CurrencyCodes" class="form-control money_input">
+                                            <option value="">***не выбрано***</option>
+                                        </select>
+                                        <span asp-validation-for="Input.CurrencyIn"></span>
+                                    </div> 
+                                </div>
+                                <div class="row mt-5">
+                                    <div class="col-md-6 mb-3 form-group">
+                                        <label asp-for="Input.Email" class="form-label"></label>
+                                        <input asp-for="Input.Email" class="form-control" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button type="submit" class="btn btn-success">Подтвердить</button>
+                                    </div>
+                                </div>
+                                @*<div asp-validation-summary=All></div>*@
+                            </form>
+                        </div>
+                    </div>
+              </div>
+            </div>
+        </div>
+    </section>
+}

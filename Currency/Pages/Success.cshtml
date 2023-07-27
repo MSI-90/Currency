@@ -1,0 +1,24 @@
+﻿@page "{from}/{to}"
+@model Currency.Pages.SuccessModel
+@{
+    Layout = "_ExchangeOk";
+    ViewData["Title"] = "Success";
+    
+}
+
+@section ExchangeOk{
+    <div class="container">
+        <div class="exchange__body">
+            @if (ModelState.IsValid && Model.Input.Quantity != 0f)
+            {
+                <partial name="_Currency" model="@Model.Input"/>
+            }
+            else
+            {
+                <h5>
+                    <strong class="dont_convert">Произошла ошибка, повторите попытку позднее</strong>
+                </h5>
+            }
+        </div>
+    </div>
+}
