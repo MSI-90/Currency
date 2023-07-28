@@ -74,7 +74,7 @@ namespace Currency.Pages
             public string CurrencyIn { get; set; }
 
             [Required(ErrorMessage = "Укажите значение")]
-            [Range(1.00f, 1000.00f, ErrorMessage = "Значение может быть в диапазоне от 1 до 1000")]
+            [Range(1.00f, 1000000.00f, ErrorMessage = "Значение может быть в диапазоне от 1 до 1000000")]
             [Display(Name = "Значение")]
             public float? Quantity { get; set; }
 
