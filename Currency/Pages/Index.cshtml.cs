@@ -61,13 +61,13 @@ namespace Currency.Pages
         }
         public class UserBindingModel
         {
-            [Required]
+            [Required(ErrorMessage = "Выберите валюту")]
             [StringLength(3, MinimumLength = 3)]
             [CurrencyCode]
             [Display(Name = "Отдаёте")]
             public string CurrencyOut { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "Выберите валюту")]
             [StringLength(3, MinimumLength = 3)]
             [CurrencyCode]
             [Display(Name = "Получаете")]
@@ -78,10 +78,10 @@ namespace Currency.Pages
             [Display(Name = "Значение")]
             public float? Quantity { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "Необходимо указать Ваш E-mail")]
             [EmailAddress]
             [Display(Name = "Укажите Ваш email адрес")]
-            public string Email { get; set; } = "test@example.com";
+            public string Email { get; set; }
         }
     }
 }
