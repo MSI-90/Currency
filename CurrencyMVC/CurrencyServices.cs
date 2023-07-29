@@ -11,7 +11,7 @@ namespace Currency
 {
     public class CurrencyServices
     {
-        private readonly IConfiguration _configuration;
+        //private static readonly IConfiguration _config;
         private static Type CurrencyListType { get; } = typeof(Currencies);
         public string[] CurrenciesList { get; set; }
         public CurrencyModel Model { get; set; }
